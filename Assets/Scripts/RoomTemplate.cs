@@ -9,4 +9,26 @@ public class RoomTemplate : MonoBehaviour
   public GameObject leftRight, upBottom;
   public static int maxAmountRoom;
 
+  public GameObject closedRoom;
+  public List<GameObject> rooms;
+
+  public GameObject room;
+
+  public float waitTime;
+
+  private bool spawnedBoss;
+  public GameObject boss;
+  void Update()
+  {
+    // !Spawna boss
+    if (waitTime <= 0 && spawnedBoss == false)
+    {
+      Instantiate(boss, room.transform.position, Quaternion.identity);
+      spawnedBoss = true;
+    }
+    else
+    {
+      waitTime -= Time.deltaTime;
+    }
+  }
 }

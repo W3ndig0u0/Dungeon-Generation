@@ -5,23 +5,26 @@ using UnityEngine;
 public class TunnelSpawn : MonoBehaviour
 {
   public GameObject tunnel;
-  public GameObject roomSpawn;
-  private Spawn spawn;
   public int direction;
+  private static int amountTunnel = -5;
+
+  public float waitTime = 3f;
   private TunnelDelete tunnelDelete;
+  private bool spawnedTunnel = false;
 
   void Start()
   {
+    Destroy(gameObject, waitTime);
     SpawnTunnel();
-    TunnelDelete.amountTunnel = 0;
   }
   void Update()
   {
-    print(TunnelDelete.amountTunnel);
+    Debug.Log(RoomTemplate.maxAmountRoom);
   }
   void SpawnTunnel()
   {
-    if (TunnelDelete.amountTunnel <= RoomTemplate.maxAmountRoom)
+    // if (true)
+    if (!spawnedTunnel && RoomTemplate.maxAmountRoom > amountTunnel)
     {
       switch (direction)
       {
@@ -45,16 +48,13 @@ public class TunnelSpawn : MonoBehaviour
           print("Error");
           break;
       }
-      TunnelDelete.amountTunnel += 1;
+      amountTunnel += 1;
+      spawnedTunnel = true;
     }
   }
 
   void OnTriggerEnter2D(Collider2D other)
   {
-    // !Ta bort gameobject om SpawnPoint krokar med varran.
-    if (CompareTag("TunnelSpawn"))
-    {
-      Destroy(gameObject);
-    }
+    Destroy(gameObject);
   }
 }
