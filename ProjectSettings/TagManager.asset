@@ -9,6 +9,9 @@ TagManager:
   - Room
   - Tunnel
   - TunnelSpawn
+  - Wall
+  - WallCheck
+  - Ground
   layers:
   - Default
   - TransparentFX
@@ -20,7 +23,7 @@ TagManager:
   - 
   - Rooms
   - 
-  - 
+  - Minimap
   - 
   - 
   - 

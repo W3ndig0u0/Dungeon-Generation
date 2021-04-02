@@ -10,15 +10,16 @@ public class Spawn : MonoBehaviour
   private RoomTemplate templates;
   private int random;
 
-  private bool spawned = false;
+  public bool spawned = false;
 
   void Start()
   {
-    // !Får tag på alla object med tagen Room
+    // !Får tag på alla object med tagen Room inom RoomTemplate
     templates = GameObject.FindGameObjectWithTag("Rooms").GetComponent<RoomTemplate>();
 
-    // !Alla rooms har lika stora index så är onödigt att ha flera randoms
+    // !Alla rooms har lika stora index
     random = Random.Range(0, templates.top.Length);
+
     RoomTemplate.maxAmountRoom = Random.Range(6, 12);
     Destroy(gameObject, waitTime);
     SpawnRoom();
@@ -31,19 +32,19 @@ public class Spawn : MonoBehaviour
       switch (direction)
       {
         case 1:
-          Instantiate(templates.room, transform.position, Quaternion.identity);
+          Instantiate(templates.bottom[random], transform.position, Quaternion.identity);
           break;
 
         case 2:
-          Instantiate(templates.room, transform.position, Quaternion.identity);
+          Instantiate(templates.top[random], transform.position, Quaternion.identity);
           break;
 
         case 3:
-          Instantiate(templates.room, transform.position, Quaternion.identity);
+          Instantiate(templates.left[random], transform.position, Quaternion.identity);
           break;
 
         case 4:
-          Instantiate(templates.room, transform.position, Quaternion.identity);
+          Instantiate(templates.right[random], transform.position, Quaternion.identity);
           break;
 
         default:
@@ -54,19 +55,11 @@ public class Spawn : MonoBehaviour
       amount += 1;
     }
   }
-
-  void OnTriggerEnter2D(Collider2D other)
+  void OnTriggerEnter2D(Collider2D spawnRoom)
   {
-    // !Ta bort gameobject om SpawnPoint krokar med varran.
-    if (CompareTag("SpawnPoint"))
+    if (spawnRoom.CompareTag("SpawnPoint"))
     {
-      // if (other.GetComponent<Spawn>().spawned == false && spawned == false)
-      // {
-      //   Instantiate(templates.closedRoom, transform.position, Quaternion.identity);
-      // Destroy(gameObject);
-      // }
-      // spawned = true;
+      Destroy(spawnRoom.gameObject);
     }
   }
-
 }
