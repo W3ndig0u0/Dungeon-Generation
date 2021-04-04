@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 3997652139909519240}
   - component: {fileID: 942036071565162618}
   - component: {fileID: 17036306927165110}
-  m_Layer: 8
+  m_Layer: 15
   m_Name: Cube (11)
   m_TagString: Room
   m_Icon: {fileID: 0}
@@ -188,7 +188,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1711623074404528989}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: Walls
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -314,8 +314,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   waitTime: 2
+  waitDestroy: 2
+  enemy: {fileID: 1357547503358072258, guid: 5debb497dcb63d44ab7be6441aef8cd2, type: 3}
   direction: 4
-  spawned: 0
 --- !u!1 &1649699366000992376
 GameObject:
   m_ObjectHideFlags: 0
@@ -329,7 +330,7 @@ GameObject:
   - component: {fileID: 6002497515333480717}
   - component: {fileID: 9068089434203815753}
   - component: {fileID: 1727761546673042323}
-  m_Layer: 8
+  m_Layer: 15
   m_Name: Cube (9)
   m_TagString: Room
   m_Icon: {fileID: 0}
@@ -460,7 +461,7 @@ GameObject:
   - component: {fileID: 2806237706328737313}
   - component: {fileID: 4029560407413173213}
   - component: {fileID: 7249840262917959922}
-  m_Layer: 8
+  m_Layer: 15
   m_Name: Cube (3)
   m_TagString: Room
   m_Icon: {fileID: 0}
@@ -476,7 +477,7 @@ Transform:
   m_GameObject: {fileID: 2554357113419978436}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 13, y: -4.5, z: -1}
-  m_LocalScale: {x: 1, y: 4, z: -5}
+  m_LocalScale: {x: 1, y: 4, z: 1}
   m_Children: []
   m_Father: {fileID: 1711623074404528989}
   m_RootOrder: 9
@@ -670,7 +671,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6ea75803120183e4791f82b4658fa4cc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  tunnel: {fileID: 5083637166497002529, guid: 99f6374a35ccd72478b736aae5b2939f, type: 3}
+  tunnel: {fileID: 653459300145772466, guid: 6df028ef2c9373545b47359f3c3b3879, type: 3}
   waitTime: 3
 --- !u!1 &2625840422987797859
 GameObject:
@@ -685,7 +686,7 @@ GameObject:
   - component: {fileID: 7938591741474182154}
   - component: {fileID: 2591565463696782506}
   - component: {fileID: 5265220868557853719}
-  m_Layer: 8
+  m_Layer: 15
   m_Name: Cube (14)
   m_TagString: Room
   m_Icon: {fileID: 0}
@@ -701,7 +702,7 @@ Transform:
   m_GameObject: {fileID: 2625840422987797859}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 13, y: 4.5, z: -1}
-  m_LocalScale: {x: 1, y: 4, z: -5}
+  m_LocalScale: {x: 1, y: 4, z: 1}
   m_Children: []
   m_Father: {fileID: 1711623074404528989}
   m_RootOrder: 10
@@ -816,7 +817,7 @@ GameObject:
   - component: {fileID: 9184692325561521332}
   - component: {fileID: 2701365696255737669}
   - component: {fileID: 480448571489152379}
-  m_Layer: 8
+  m_Layer: 15
   m_Name: Cube (6)
   m_TagString: Room
   m_Icon: {fileID: 0}
@@ -832,7 +833,7 @@ Transform:
   m_GameObject: {fileID: 3086474002149529130}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 8, y: 7, z: -1}
-  m_LocalScale: {x: 11, y: 1, z: -5}
+  m_LocalScale: {x: 11, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1711623074404528989}
   m_RootOrder: 1
@@ -1018,7 +1019,7 @@ GameObject:
   - component: {fileID: 615995361285782007}
   - component: {fileID: 8734910414049406855}
   - component: {fileID: 2091092579487967817}
-  m_Layer: 8
+  m_Layer: 15
   m_Name: Cube (10)
   m_TagString: Room
   m_Icon: {fileID: 0}
@@ -1149,7 +1150,7 @@ GameObject:
   - component: {fileID: 235580822024097147}
   - component: {fileID: 4745286986285110340}
   - component: {fileID: 8264921139863740676}
-  m_Layer: 8
+  m_Layer: 15
   m_Name: Cube (5)
   m_TagString: Room
   m_Icon: {fileID: 0}
@@ -1165,7 +1166,7 @@ Transform:
   m_GameObject: {fileID: 4003564427596359953}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -8, y: -7, z: -1}
-  m_LocalScale: {x: 11, y: 1, z: -5}
+  m_LocalScale: {x: 11, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1711623074404528989}
   m_RootOrder: 0
@@ -1280,7 +1281,7 @@ GameObject:
   - component: {fileID: 3076301740775063509}
   - component: {fileID: 4913290322951634984}
   - component: {fileID: 8806458247641396506}
-  m_Layer: 8
+  m_Layer: 15
   m_Name: Cube (13)
   m_TagString: Room
   m_Icon: {fileID: 0}
@@ -1296,7 +1297,7 @@ Transform:
   m_GameObject: {fileID: 4051927998499683047}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 8, y: -7, z: -1}
-  m_LocalScale: {x: 11, y: 1, z: -5}
+  m_LocalScale: {x: 11, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1711623074404528989}
   m_RootOrder: 8
@@ -1411,7 +1412,7 @@ GameObject:
   - component: {fileID: 156129446552730055}
   - component: {fileID: 2329798237227934520}
   - component: {fileID: 9171489660592352686}
-  m_Layer: 8
+  m_Layer: 15
   m_Name: Cube (2)
   m_TagString: Room
   m_Icon: {fileID: 0}
@@ -1427,7 +1428,7 @@ Transform:
   m_GameObject: {fileID: 4350908797350560468}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -13, y: -4.5, z: -1}
-  m_LocalScale: {x: 1, y: 4, z: -5}
+  m_LocalScale: {x: 1, y: 4, z: 1}
   m_Children: []
   m_Father: {fileID: 1711623074404528989}
   m_RootOrder: 3
@@ -1542,7 +1543,7 @@ GameObject:
   - component: {fileID: 9023918107181992733}
   - component: {fileID: 6852164668519935780}
   - component: {fileID: 1669765017827153716}
-  m_Layer: 8
+  m_Layer: 15
   m_Name: Cube (12)
   m_TagString: Room
   m_Icon: {fileID: 0}
@@ -1671,12 +1672,12 @@ GameObject:
   - component: {fileID: 3802221377348220945}
   - component: {fileID: 2444449740530021342}
   - component: {fileID: 7090562173040422103}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Cube
   m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 8
   m_IsActive: 1
 --- !u!4 &3802221377348220945
 Transform:
@@ -1687,7 +1688,7 @@ Transform:
   m_GameObject: {fileID: 6745511456877458880}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 27, y: 15, z: 2}
+  m_LocalScale: {x: 27, y: 15, z: 1}
   m_Children: []
   m_Father: {fileID: 100091077962277887}
   m_RootOrder: 4
@@ -1755,7 +1756,7 @@ GameObject:
   - component: {fileID: 8001004195950237040}
   - component: {fileID: 6012003645251708864}
   - component: {fileID: 8831546742848668492}
-  m_Layer: 8
+  m_Layer: 15
   m_Name: Cube (7)
   m_TagString: Room
   m_Icon: {fileID: 0}
@@ -1771,7 +1772,7 @@ Transform:
   m_GameObject: {fileID: 7542156471713058974}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -13, y: 4.5, z: -1}
-  m_LocalScale: {x: 1, y: 4, z: -5}
+  m_LocalScale: {x: 1, y: 4, z: 1}
   m_Children: []
   m_Father: {fileID: 1711623074404528989}
   m_RootOrder: 2
@@ -1886,7 +1887,7 @@ GameObject:
   - component: {fileID: 7707515978520665092}
   - component: {fileID: 5439201968936013276}
   - component: {fileID: 4208183562666638547}
-  m_Layer: 8
+  m_Layer: 15
   m_Name: Cube (8)
   m_TagString: Room
   m_Icon: {fileID: 0}
@@ -1902,7 +1903,7 @@ Transform:
   m_GameObject: {fileID: 8665731293219468321}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -8, y: 7, z: -1}
-  m_LocalScale: {x: 11, y: 1, z: -5}
+  m_LocalScale: {x: 11, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1711623074404528989}
   m_RootOrder: 4

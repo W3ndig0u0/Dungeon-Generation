@@ -5,24 +5,42 @@ using UnityEngine;
 public class Spawn : MonoBehaviour
 {
   public float waitTime = 2f;
-  public int direction;
-  private static int amount = 0;
-  private RoomTemplate templates;
-  private int random;
+  public float waitDestroy = 2f;
 
-  public bool spawned = false;
+  public GameObject enemy;
+  public int direction;
+  static int amount = 0;
+  public static int enemies = 0;
+  int maxEnemies = 8;
+  Vector3 randomSpawnEnemy;
+  RoomTemplate templates;
+  int random;
+  bool spawned = false;
 
   void Start()
   {
     // !Får tag på alla object med tagen Room inom RoomTemplate
     templates = GameObject.FindGameObjectWithTag("Rooms").GetComponent<RoomTemplate>();
-
     // !Alla rooms har lika stora index
     random = Random.Range(0, templates.top.Length);
 
     RoomTemplate.maxAmountRoom = Random.Range(6, 12);
-    Destroy(gameObject, waitTime);
+    // Destroy(gameObject, waitDestroy);
     SpawnRoom();
+  }
+  void Update()
+  {
+    if (waitTime <= 0 && maxEnemies > enemies)
+    {
+      Instantiate(enemy, transform.position, Quaternion.identity);
+      enemies += 1;
+      print(Target.health);
+      waitTime = 1;
+    }
+    else
+    {
+      waitTime -= Time.deltaTime;
+    }
   }
   void SpawnRoom()
   {

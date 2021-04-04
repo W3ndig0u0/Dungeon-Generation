@@ -8,7 +8,7 @@ public class DeleteRoom : MonoBehaviour
   {
     if (other.CompareTag("Room"))
     {
-      Destroy(gameObject); 
+      Destroy(gameObject);
     }
   }
 }

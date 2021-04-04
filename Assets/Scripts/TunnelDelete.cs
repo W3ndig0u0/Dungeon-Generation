@@ -8,7 +8,7 @@ public class TunnelDelete : MonoBehaviour
   {
     if (tunnel.CompareTag("Tunnel"))
     {
-      // Destroy(this.gameObject);
+      Destroy(gameObject);
     }
   }
 }

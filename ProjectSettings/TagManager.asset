@@ -12,6 +12,8 @@ TagManager:
   - Wall
   - WallCheck
   - Ground
+  - Enemy
+  - UI
   layers:
   - Default
   - TransparentFX
@@ -25,10 +27,10 @@ TagManager:
   - 
   - Minimap
   - 
+  - Ground
   - 
   - 
-  - 
-  - 
+  - Wall
   - 
   - 
   - 

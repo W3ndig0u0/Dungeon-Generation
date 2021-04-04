@@ -8,7 +8,7 @@ public class TunnelSpawn : MonoBehaviour
   private static int amountTunnel = -4;
 
   public float waitTime = 3f;
-  private bool spawnedTunnel = false;
+  // private bool spawnedTunnel = false;
 
 
   void Start()
@@ -27,6 +27,6 @@ public class TunnelSpawn : MonoBehaviour
     }
 
     amountTunnel += 1;
-    spawnedTunnel = true;
+    // spawnedTunnel = true;
   }
 }
